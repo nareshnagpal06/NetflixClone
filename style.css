@@ -1,0 +1,151 @@
+body
+{
+    background-color:#111;
+    color: white;
+    font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+    margin: 0;
+
+}
+
+header
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding-top: 15px;
+}
+
+.logo img{
+    width: 120px;
+}
+
+
+.profile img{
+    width: 40px;
+}
+
+.original__movies,.movies__container
+{
+    padding-left:50px;
+}
+.original__movies img {
+    height: 250px;
+    width: auto;
+    margin-right: 10px;
+
+}
+
+.original__movies  {
+    display: flex;
+    overflow-x: scroll;
+    scrollbar-width: none;  /* Firefox */
+}
+.original__movies::-webkit-scrollbar {
+    display: none;
+  }
+
+.movies__container img{
+    margin-right:10px;
+    width:200px;
+    
+}
+
+.netflixOriginals h2, .movies__header h2{
+    padding-left:30px
+} 
+
+/* .original__movies {
+    overflow-x: scroll;
+    white-space: nowrap;
+} */
+
+img {
+    width: 100px;
+}
+
+
+.featured
+{
+    height: 400px;
+    background-image: url('https://image.tmdb.org/t/p/original//3lBDg3i6nn5R2NKFCJ6oKyUo2j5.jpg');
+     background-size: cover; /*puts image in entire screen */
+    background-position: center; /*puts image in center */
+    padding: 0 0 0 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+
+.featured::after{
+    content: "";
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:0;
+   height: 7.4rem;
+    /* background-color:green; */
+background-image: linear-gradient(180deg,transparent,rgba(37,37,37,.61),#111)
+}
+.featured h2{
+    font-size: 50px;
+    margin: 0;
+    z-index: 10;
+}
+
+.featured .featured__buttons {
+    z-index: 10;
+}
+
+.featured .featured__buttons button{
+    padding: 8px 24px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    background-color: rgba(109,109,110,0.7);
+    border:none;
+    color: white;
+    border-radius: 4px;
+    /* z-index: 10; */
+}
+
+
+.featured .featured__buttons .button__play{
+    background-color: white;
+    color: black;
+    
+}
+
+.featured .featured__buttons .button__play i
+{
+    margin-right: 4px;
+}
+
+.featured .featured__description
+{
+    max-width: 350px;
+    font-weight: 400;
+    text-shadow: 2px 2px 4px rgba(0,0,0,.45);
+    z-index: 10;
+}
+
+
+.featured::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 12;
+    background-color:rgba(0, 0,0,0.3);
+
+}
+
