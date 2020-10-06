@@ -31,6 +31,7 @@ header
     width: 40px;
 }
 
+
 .original__movies,.movies__container
 {
     
@@ -67,6 +68,7 @@ header
 .movies__container img{
     margin-right:10px;
     width:200px;
+    height: 150px;
     
     
 }
