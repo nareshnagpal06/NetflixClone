@@ -1,6 +1,6 @@
 body
 {
-    background-color:#111;
+    background-color:rgba(17, 17, 17,0.9);
     color: white;
     font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
     margin: 0;
@@ -33,8 +33,26 @@ header
 
 .original__movies,.movies__container
 {
+    
     padding-left:50px;
+    display: flex;
+    overflow-x: scroll;
+    scrollbar-width: none;  /*Firefox*/
+    padding-top: 20px;
+    padding-bottom: 20px;
+    
 }
+
+.original__movies::-webkit-scrollbar,.movies__container::-webkit-scrollbar{
+    display: none;
+  }
+
+  .original__movies img, .movies__container img
+{
+   transition: all 0.2s ease-out;
+   cursor:pointer;
+}
+
 .original__movies img {
     height: 250px;
     width: auto;
@@ -42,20 +60,17 @@ header
 
 }
 
-.original__movies  {
-    display: flex;
-    overflow-x: scroll;
-    scrollbar-width: none;  /* Firefox */
+.original__movies img:hover, .movies__container img:hover {
+    transform: scale(1.1)
 }
-.original__movies::-webkit-scrollbar {
-    display: none;
-  }
 
 .movies__container img{
     margin-right:10px;
     width:200px;
     
+    
 }
+
 
 .netflixOriginals h2, .movies__header h2{
     padding-left:30px
@@ -149,3 +164,8 @@ background-image: linear-gradient(180deg,transparent,rgba(37,37,37,.61),#111)
 
 }
 
+
+
+
+
+ 
